@@ -45,7 +45,6 @@ K = \left(R + B_d^\top P B_d\right)^{-1} B_d^\top P A_d,
 \qquad u = -Kx
 ```
 
-As a check, the same cost was also posed as a quadratic program over the whole trajectory and solved numerically. The QP and the Riccati solution agree to solver tolerance (cost 27446.54 for both).
 
 ---
 
