@@ -1,8 +1,8 @@
-# Ballbot Control: What MPC Brings That LQR Doesn't
+# CMU Ballbot: LQR vs MPC Comparison
 
 For my linear multivariable controls project, I followed along with CMU's implementation of an LQR controller to their ballbot as practice and went on to control the system with MPC. However, what I didn't do then which I want to do now is explore why you would want to use MPC to control a system. Here, I explored the limits of LQR in comparison to MPC and see what MPC brings to the table that LQR doesn't.
 
-**Notebooks:** `Ballbot_LQR_Optimization.ipynb` (model + LQR) · `Ballbot_MPC.ipynb` (MPC + experiments)
+**Notebooks:** `LQR_Implementation.ipynb` (model + LQR) · `MPC_implementation.ipynb` (MPC + experiments)
 
 ---
 
@@ -45,7 +45,6 @@ K = \left(R + B_d^\top P B_d\right)^{-1} B_d^\top P A_d,
 \qquad u = -Kx
 ```
 
-As a check, the same cost was also posed as a quadratic program over the whole trajectory and solved numerically. The QP and the Riccati solution agree to solver tolerance (cost 27446.54 for both).
 
 ---
 
