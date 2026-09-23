@@ -2,7 +2,7 @@
 
 For my linear multivariable controls project, I followed along with CMU's implementation of an LQR controller to their ballbot as practice and went on to control the system with MPC. However, what I didn't do then which I want to do now is explore why you would want to use MPC to control a system. Here, I explored the limits of LQR in comparison to MPC and see what MPC brings to the table that LQR doesn't.
 
-**Notebooks:** `Ballbot_LQR_Optimization.ipynb` (model + LQR) · `Ballbot_MPC.ipynb` (MPC + experiments)
+**Notebooks:** `LQR_Implementation.ipynb` (model + LQR) · `MPC_implementation.ipynb` (MPC + experiments)
 
 ---
 
