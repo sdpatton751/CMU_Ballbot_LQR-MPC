@@ -4,6 +4,8 @@ For my linear multivariable controls project, I followed along with CMU's implem
 
 **Notebooks:** `LQR_Implementation.ipynb` (model + LQR) · `MPC_implementation.ipynb` (MPC + experiments)
 
+*This project was rebuilt with AI assistance (Claude); see [AI assistance disclosure](#ai-assistance-disclosure) for details.*
+
 ---
 
 ## 1. Model and LQR recap
@@ -160,6 +162,26 @@ so a lean limit and a torque limit each imply a maximum cruise speed:
 | Torque ≤ 3 N·m | 0.0431 m/s | 0.0432 m/s |
 
 This is why the torque-limited run is the slower of the two. Speed, lean and torque limits are three views of the same steady-state balance against friction; they differ only in the transients.
+
+---
+
+## AI assistance disclosure
+
+This project is a revisit of my graduate controls coursework, rebuilt with assistance from Claude (Anthropic).
+
+**My work:** The original LQR and MPC implementations for the ballbot (model setup, parameters,
+cost and constraint design, notebook structure), the decision to revisit the project, and the
+central question of what MPC offers that LQR doesn't.
+
+**AI-assisted:** Claude reviewed my original code and identified modeling errors (a missing
+ball-radius term in the mass matrix and sign errors in the gravity and damping terms, inherited
+from the published A matrix), along with several smaller bugs. It re-derived the linearized model
+symbolically to confirm the corrections, added the Riccati-equation verification of the LQR
+optimization, restructured the MPC implementation (terminal cost, soft constraints, parameterized
+solves), designed and implemented Experiments 1–3, and drafted this README.
+
+I reviewed and ran all code, and worked through the derivations and results to make sure I
+understand them. Any remaining errors are my own.
 
 ---
 
